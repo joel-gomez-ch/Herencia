@@ -34,14 +34,29 @@ void Persona::mostrardatos(){
 }
 
 class Docente : Persona{
-	public:
+	private:
 		int sueldo;
+	public:
 		string especialidad;
 		docente();
 		void mostrardocente();
+		void ingresardocente();
 		void ingresarnotas();
 		void visualizarregistro();
 };
+
+void Docente::mostrardocente(){
+	Persona::mostrardatos();
+	cout<<"Sueldo: "<<sueldo<<endl;
+	cout<<"Especialidad: "<<especialidad<<endl;
+}
+
+Docente:: docente(){
+	Persona();
+	sueldo = 0000;
+	especialidad = "No especificada";
+	
+}
 
 class Estudiante : Persona{
 	public:
@@ -54,7 +69,7 @@ class Estudiante : Persona{
 };
 
 int main(){
-	Persona x;
+	Docente x;
 	x.leerdatos();
 	x.mostrardatos();
 }
